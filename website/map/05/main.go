@@ -1,18 +1,17 @@
 package main
 
 import (
-	"net/http"
-	"log"
-	"text/scanner"
 	"bufio"
 	"fmt"
+	"log"
+	"net/http"
 )
 
-func main(){
+func main() {
 
-	res,err := http.Get("http://www.gutenberg.org/files/2701/old/moby10b.txt")
+	res, err := http.Get("http://www.gutenberg.org/files/2701/old/moby10b.txt")
 
-	if err !=nil{
+	if err != nil {
 		log.Fatal(err)
 	}
 
@@ -20,14 +19,13 @@ func main(){
 	defer res.Body.Close()
 	scanner.Split(bufio.ScanWords)
 
-	buckets := make([]int,200)
+	buckets := make([]int, 200)
 
-	for scanner.Scan(){
+	for scanner.Scan() {
 		n := HashBucket(scanner.Text())
 		buckets[n]++
 	}
-	fmt.Println(buckets[65:122])
-
+	fmt.Println(buckets[65:123])
 
 }
 
