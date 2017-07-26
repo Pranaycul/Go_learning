@@ -8,7 +8,7 @@ func main() {
 
 	mySlice[0] = 7
 	fmt.Println(mySlice[0])
-	
+
 	mySlice[0]++
 	fmt.Println(mySlice[0])
 }
