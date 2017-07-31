@@ -12,7 +12,7 @@ func main() {
 		}
 		close(c)
 	}()
-	
+
 	for n := range c {
 		fmt.Println(n)
 	}
