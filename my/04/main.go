@@ -13,6 +13,6 @@ func (p *person)ServeHTTP(w http.ResponseWriter, r *http.Request)  {
 func main()  {
 
 	personOne :=&person{fName:"Pranay"}
-	http.ListenAndServe(":8080/", personOne)
+	http.ListenAndServe(":8080", personOne)
 
 }
