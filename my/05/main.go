@@ -9,7 +9,7 @@ import (
 type MyHandler struct {
 }
 
-func (this *MyHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+func (myhandler *MyHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	path := r.URL.Path[1:]
 	log.Println(path)
 	data, err := ioutil.ReadFile(string(path))
