@@ -32,7 +32,7 @@ func (myhandler *MyHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		} else if strings.HasSuffix(path, ".mp4") {
 			contentType = "video/mp4"
 		} else {
-			contentType = "test/plain"
+			contentType = "text/plain"
 		}
 
 		w.Header().Add("Content-Type", contentType)
