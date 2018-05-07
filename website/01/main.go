@@ -1,4 +1,7 @@
-ackage main
+package main
+
+import "fmt"
+main
 
 import "fmt"
 
